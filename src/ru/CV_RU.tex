@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+\documentclass[10pt,a4paper,normalphoto]{altacv}
+
+% \documentclass[10pt,a4paper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=11.2cm,marginparwidth=10cm,marginparsep=0.8cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[default]{lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{ViolentUrl}{HTML}{9D44B5}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{SlateGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=ViolentUrl,
+  linkcolor=Red,
+  urlcolor=ViolentUrl}
+
+\begin{document}
+
+\name{Дурнов Алексей Николаевич}
+\tagline{{\Large Исследователь \& C/C++ Разработчик (Сетевой анализ трафика)}}
+%\photo{3cm}{5DSR_0451.JPG}
+\personalinfo{
+  \telegram{\href{https://t.me/Panterrich}{@Panterrich}}
+  \github{\href{https://github.com/Panterrich}{github.com/Panterrich}}
+  \linkedin{\href{htttps:://www.linkedin.com/in/aleksei-durnov-89201b216}{www.linkedin.com/in/aleksei-durnov-89201b216}}
+  \newline
+  \location{Moscow, Russia}
+  \phone{+7(980)513-92-12}
+  \email{durnov.an@phystech.edu}
+  \newline
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{ОБРАЗОВАНИЕ}
+\cvevent{Бакалавр по профилю Радиотехника и Компьютерные технологии}{Московский физико-технический институт}{Сентябрь 2020 - Июнь 2024}{}
+\begin{itemize}
+    \item Средний балл: 8.8/10.0 (4.91/5.00).
+    \item Топ 6 рейтинга по физтех-школе.
+    \item Тема ВКР: \href{https://github.com/Panterrich/AutoSignatureGenerator}{<<Автоматическая генерация сигнатур сетевых протоколов>>}.
+    Разработанные генератор сигнатур и классификатор были встроены как модули в систему анализа сетевого трафика, разрабатываемую в ИСП РАН.
+\end{itemize}
+
+\medskip
+
+\cvevent{Магистр по профилю Радиотехника и Компьютерные технологии}{Московский физико-технический институт}{Сентябрь 2024 - Настоящее время}{}
+
+\divider
+
+\cvsection{ОПЫТ РАБОТЫ}
+
+\cvevent{Лаборант (Исследователь \& C/C++ Разработчик)}{Институт системного программирования им. В.П. Иванникова Российской академии наук}{Июнь 2022 -- Настоящее время}{}
+\begin{itemize}
+\item Разработал модуль протокола RTSP для DPI системы \href{https://www.ispras.ru/en/technologies/protosphere/}{<<Protosphere>>}.
+\item Провел \href{https://github.com/Panterrich/FTE/blob/master/fte.pdf}{обширный обзор атак протокольного туннелирования}.
+\item Занимался НИР <<Анализ искаженных последовательностей>>.
+Разработал верификаторы с последовательным доступом к памяти для таких форматов файлов, как zip, 7z, rar, png, tiff, rtf для системы проверки моделей.
+Также реализовал множество декодер сжатых данных: Deflate, LZMA, CCITT G3, LZW, RLE, ASCII Hex, ASCII85.
+\end{itemize}
+
+\medskip
+
+\cvevent{Ментор}{Учебный курс <<Введение в промышленное программирование на языке C>>, МФТИ, Лектор: Дединский Илья Рудольфович}{Сентябрь 2021 -- Настоящее время}{}
+\begin{itemize}
+    \item Курс покрывает основные структуры данных и алгоритмы, финальный проект - собственный язык программирования.
+    \item Менторю группу размером 10-20 студентов каждый год.
+    \item \href{https://wiki.mipt.tech/index.php/%D0%94%D1%83%D1%80%D0%BD%D0%BE%D0%B2%5F%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9%5F%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87}{Моя страница на wiki.mipt}.
+\end{itemize}
+
+\divider
+
+\clearpage
+
+\end{document}
